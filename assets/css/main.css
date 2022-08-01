@@ -37,6 +37,30 @@ body {
   overflow-x: hidden;
 }
 
+.counter, .date-of-countdown {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.date-of-countdown {
+  color: #ffc732;
+  font-size: 2.5rem;
+}
+
+#bottomSpan {
+  text-decoration: underline;
+  color: #ffc732;
+}
+
+.if-before-date {
+  display: none;
+}
+
+.countdown-to-launch {
+  color: white;
+  padding-top: 3rem;
+}
+
 a {
   color: var(--color-primary);
   text-decoration: none;
