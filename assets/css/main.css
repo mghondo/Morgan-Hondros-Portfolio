@@ -58,7 +58,26 @@ body {
 
 .countdown-to-launch {
   color: white;
-  padding-top: 3rem;
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .main-morgo {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+
+  .date-of-countdown {
+
+    font-size: 1rem;
+  }
+  .main-intro-and-stuff {
+    font-size: 1rem;
+  }
 }
 
 a {
@@ -2604,7 +2623,8 @@ section {
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+  background: url("../img/sccubaDoo3.jpg") top center no-repeat;
+  background: rgba(86, 86, 89, 0.837);
   background-size: cover;
   font-size: 14px;
   padding: 80px 0 60px 0;
@@ -2613,7 +2633,7 @@ section {
 
 .footer:before {
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(8, 17, 36, 0.676);
   position: absolute;
   inset: 0;
 }
@@ -2646,7 +2666,7 @@ section {
 .footer .footer-content .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(155, 177, 223, 0.752);
   color: #fff;
   line-height: 1;
   margin-right: 8px;
