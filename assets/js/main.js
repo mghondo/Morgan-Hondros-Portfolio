@@ -301,7 +301,15 @@ document.querySelector("#contactForm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault();
-  console.log(123);
+
+  //Get input values
+  let name = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let phone = document.querySelector("#name").value;
+  let message = document.querySelector("#message").value;
+  console.log(name, email, message, phone);
+
+  // saveContactInfo(name, email, phone, message);
 }
 
 // export default {
