@@ -296,6 +296,13 @@ function init() {
       // }
     }, second);
 }
+// Listen for submit
+document.querySelector("#contactForm").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+  console.log(123);
+}
 
 // export default {
 //   init,
