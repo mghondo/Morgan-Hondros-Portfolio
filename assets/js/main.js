@@ -5,6 +5,22 @@
  * License: https://bootstrapmade.com/license/
  */
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyB9Eib2lcAIGKyrnY7NUW2YY6Q2X-Dmr40",
+//   authDomain: "contactform-c8efd.firebaseapp.com",
+//   projectId: "contactform-c8efd",
+//   storageBucket: "contactform-c8efd.appspot.com",
+//   messagingSenderId: "536475148888",
+//   appId: "1:536475148888:web:ba4c954bab3a5c06c1602d",
+//   measurementId: "G-QQSC4FB8S3",
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
