@@ -257,8 +257,8 @@ function init() {
   const date = document.querySelector("[data-date]").dataset.date;
   const h3DateInnerText = document.querySelector(".date-of-countdown");
   const dateString = " PM EST";
-  const hideThisClass = document.getElementById("main");
-  hideThisClass.style.display = "none";
+  // const hideThisClass = document.getElementById("main");
+  // hideThisClass.style.display = "none";
 
   let countDown = new Date(date).getTime(),
     x = setInterval(function () {
