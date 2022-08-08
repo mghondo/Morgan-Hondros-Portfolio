@@ -4,22 +4,24 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+// import { initializeApp } from "firebase/app";
+// import { getAuth } from "firebase/auth";
+// import { getFirestore, collection, getDocs, getDoc } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyB9Eib2lcAIGKyrnY7NUW2YY6Q2X-Dmr40",
-//   authDomain: "contactform-c8efd.firebaseapp.com",
-//   projectId: "contactform-c8efd",
-//   storageBucket: "contactform-c8efd.appspot.com",
-//   messagingSenderId: "536475148888",
-//   appId: "1:536475148888:web:ba4c954bab3a5c06c1602d",
-//   measurementId: "G-QQSC4FB8S3",
-// };
+// const firebaseApp = initializeApp({
+//   apiKey: "AIzaSyBuzeeAxEhvCGYKnOVg--fbi74SJo2w9xo",
+//   authDomain: "portcontactform.firebaseapp.com",
+//   projectId: "portcontactform",
+//   storageBucket: "portcontactform.appspot.com",
+//   messagingSenderId: "594946512737",
+//   appId: "1:594946512737:web:ac1fb0f831418a0c89d720",
+// });
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+// const auth = getAuth(firebaseApp);
+// const db = getFirestore(firebaseApp);
 
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
@@ -311,21 +313,6 @@ function init() {
       //   clearInterval(x);
       // }
     }, second);
-}
-// Listen for submit
-document.querySelector("#contactForm").addEventListener("submit", submitForm);
-
-function submitForm(e) {
-  e.preventDefault();
-
-  //Get input values
-  let name = document.querySelector("#name").value;
-  let email = document.querySelector("#email").value;
-  let phone = document.querySelector("#name").value;
-  let message = document.querySelector("#message").value;
-  console.log(name, email, message, phone);
-
-  // saveContactInfo(name, email, phone, message);
 }
 
 // export default {

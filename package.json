@@ -1,5 +1,16 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.0"
-  }
+    "bootstrap": "^5.2.0",
+    "firebase": "^9.9.1"
+  },
+  "name": "morgan-hondros-porfolio-countdown",
+  "description": "Thanks for downloading this template!",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
