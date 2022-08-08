@@ -1054,7 +1054,15 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
 
-    import {getDatabase, set, get, update, remove, ref, child} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js"
+    import {
+  getDatabase,
+  set,
+  get,
+  update,
+  remove,
+  ref,
+  child,
+} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
 
 const db = getDatabase();
 
@@ -1063,30 +1071,33 @@ var email = document.querySelector("#email");
 var phone = document.querySelector("#phone");
 var message = document.querySelector("#message");
 var errorMsg = document.querySelector(".error-message2");
-var sentMsg = document.querySelector('.sent-message2');
+var sentMsg = document.querySelector(".sent-message2");
 
 var submitBtn = document.querySelector("#submitContact");
 
-submitBtn.addEventListener('click', insertData);
+submitBtn.addEventListener("click", insertData);
 
-function insertData(){
+function insertData() {
   // e.preventDefault();
-  set(ref(db, 'ReachOuts/' + name.value), {
+  set(ref(db, "ReachOuts/" + name.value), {
     Name: name.value,
     Email: email.value,
     Phone: phone.value,
-    Message: message.value
+    Message: message.value,
   })
-  .then(()=>{
-    sentMsg.innerHTML =  "Thanks for sending your info!! I'll get back to you."
-  })
-  .catch((error)=>{
-    errorMsg.innerHTML = "Something went wrong."
-  })
+    .then(() => {
+      sentMsg.innerHTML =
+        "Thanks for sending your info!! I'll get back to you.";
+    })
+    .catch((error) => {
+      errorMsg.innerHTML = "Something went wrong.";
+    });
   console.log("I think this is working");
 }
 
+
   </script>
+  <script src="assets/js/other.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
