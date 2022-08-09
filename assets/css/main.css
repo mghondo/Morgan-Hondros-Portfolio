@@ -111,9 +111,9 @@ body {
   padding-top: 1rem;
 }
 
-/* #main {
+#main {
   display: none;
-} */
+}
 .countdownDiv {
   align-items: center;
   width: 100%;
