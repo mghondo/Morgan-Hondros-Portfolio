@@ -1137,7 +1137,7 @@ function insertData() {
       sentMsg.classList.remove("hidden");
       sentMsg.innerHTML =
         "Thanks for sending your info!! I'll get back to you.";
-      // sentMsg.classList.add("hidden").delay(3000);
+      setTimeout(successDisappear, 3000);
     })
     .catch((error) => {
       sentMsg.classList.remove("hidden");
@@ -1163,6 +1163,10 @@ function cleanThingsUp(){
   email.value = "";
   phone.value = "";
   message.value = "";
+}
+
+function successDisappear(){
+  sentMsg.classList.add("hidden");
 }
 
   </script>

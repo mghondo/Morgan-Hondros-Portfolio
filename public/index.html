@@ -173,35 +173,29 @@
             <!-- <form action="forms/quote.php" method="post" class="php-email-form"> -->
             <!-- <form id="contactForm" >  -->
               <h3>Fill out and send</h3>
-              <p>This form uses <b>Firebase</b> and sends me a notification once submitted.</p>
+              <p>This form uses <b>Firebase</b> and sends me a notification once submitted. FYI, I don't share your information.</p>
               <div class="row gy-3">
 
                 <div class="col-md-12">
                   <input id="name"type="text" name="name" class="form-control" placeholder="Name" required>
                 </div>
-
+                <h3 id="name-valid" class="errorH3 hidden"></h3>
                 <div class="col-md-12 ">
                   <input id="email" type="text" class="form-control" name="email" placeholder="Email" required>
                 </div>
-
+                <h3 id="email-valid" class="errorH3 hidden"></h3>
                 <div class="col-md-12">
                   <input id="phone" type="text" class="form-control" name="phone" placeholder="Phone" required>
                 </div>
-
+                <h3 id="phone-valid" class="errorH3 hidden"></h3>
                 <div class="col-md-12">
                   <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
-
+                <h3 id="message-valid" class="errorH3 hidden"></h3>
                 <div class="col-md-12 text-center">
-                  <!-- <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your quote request has been sent successfully. Thank you!</div> -->
-
-                  <div class="error-message2"></div>
-                  <div class="sent-message2"></div>
-
+                  <h3 id="sent-message"class="successH3 hidden"></h3>
                   <button id="submitContact" class="btn-get-started">Reach Out</button>
-                  
+
                 </div>
 
               </div>
@@ -958,6 +952,8 @@
                 <a href="https://www.facebook.com/morgan.hondros/" target="_blank" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/skursion/" target="_blank" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/morgan-hondros-781878151/" target="_blank" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/mghondo" target="_blank" class="d-flex align-items-center justify-content-center"><i class="bi bi-github"></i></a>
+                
               </div>
             </div>
           </div>
@@ -1076,14 +1072,59 @@ var name = document.querySelector("#name");
 var email = document.querySelector("#email");
 var phone = document.querySelector("#phone");
 var message = document.querySelector("#message");
-var errorMsg = document.querySelector(".error-message2");
-var sentMsg = document.querySelector(".sent-message2");
+var sentMsg = document.querySelector("#sent-message");
+var nameValid = document.querySelector("#name-valid");
+var emailValid = document.querySelector("#email-valid");
+var phoneValid = document.querySelector("#phone-valid");
+var messageValid = document.querySelector("#message-valid");
+
+var nameValue = name.value;
+var emailValue = email.value;
+var phoneValue = phone.value;
+var messageValue = message.value;
+// console.log(nameValue);
 
 var submitBtn = document.querySelector("#submitContact");
 
-submitBtn.addEventListener("click", insertData);
+submitBtn.addEventListener("click", validateForm);
+
+function testFunc(){
+  console.log(name.value);
+}
+function validateForm(){
+  var steps = 0;
+  if (name.value.length == 0){
+    nameValid.classList.remove("hidden");
+    nameValid.innerHTML = "Enter a name!";
+  } else{
+    steps += 1;
+  }
+  if(email.value.indexOf("@") == -1 || email.value.length == 0){
+    emailValid.classList.remove("hidden");
+    emailValid.innerHTML = "Enter a valid email";
+  }else{
+    steps += 1;
+  }
+  if (phone.value.length == 0){
+    phoneValid.classList.remove("hidden");
+    phoneValid.innerHTML = "Enter a valid phone number";
+  }else{
+    steps += 1;
+  }
+  if(message.value.length == 0){
+    messageValid.classList.remove("hidden");
+    messageValid.innerHTML = "Just type something in.:)";
+  }else{
+    steps += 1;
+  }
+if (steps == 4){
+  console.log(steps);
+  insertData();
+}
+}
 
 function insertData() {
+
   // e.preventDefault();
   set(ref(db, "ReachOuts/" + name.value), {
     Name: name.value,
@@ -1092,15 +1133,37 @@ function insertData() {
     Message: message.value,
   })
     .then(() => {
+      cleanThingsUp();
+      sentMsg.classList.remove("hidden");
       sentMsg.innerHTML =
         "Thanks for sending your info!! I'll get back to you.";
+      // sentMsg.classList.add("hidden").delay(3000);
     })
     .catch((error) => {
-      errorMsg.innerHTML = "Something went wrong. Make sure you put an actual email, and actual phone number, etc.";
+      sentMsg.classList.remove("hidden");
+      sentMsg.innerHTML = "Something went wrong. Make sure you put an actual email, and actual phone number, etc.";
     });
   // console.log("I think this is working");
 }
 
+function cleanThingsUp(){
+  if (!nameValid.classList.contains("hidden")){
+    nameValid.classList.add("hidden");
+  }
+  if (!emailValid.classList.contains("hidden")){
+    emailValid.classList.add("hidden");
+  }
+  if(!phoneValid.classList.contains("hidden")){
+    emailValid.classList.add("hidden");
+  }
+  if(!messageValid.classList.contains("hidden")){
+    messageValid.classList.add("hidden");
+  }
+  name.value = "";
+  email.value = "";
+  phone.value = "";
+  message.value = "";
+}
 
   </script>
   <script src="assets/js/other.js"></script>
