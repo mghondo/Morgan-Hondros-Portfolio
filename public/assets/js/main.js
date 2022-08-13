@@ -26,14 +26,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
-  const mainTitle = "Morgan Hondros";
-  const formalmainTitleThe = "The Morgan Hondros Portfolio Page";
-  const formalNoThe = "Morgan Hondros Portfolio Page";
-  const mainTitleCarousel = document.getElementById("main-title");
-  mainTitleCarousel.innerText = formalNoThe;
-
-  const bottomSpan = document.getElementById("bottomSpan");
-  bottomSpan.innerText = formalmainTitleThe;
   /**
    * Preloader
    */
@@ -315,7 +307,9 @@ function init() {
     }, second);
 }
 
-// export default {
-//   init,
-// };
-init();
+// $(document).ready(function () {
+//   if (window.location.pathname == "../index.html") {
+//     init();
+//   }
+// });
+// init();
