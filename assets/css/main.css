@@ -91,6 +91,14 @@ body {
   font-size: 2.5rem;
 }
 
+#headerContact {
+  background: rgb(48, 48, 70);
+  
+}
+.contactPage {
+  padding-top: 40px;
+}
+
 /*  Error Messages */
 .errorH4 {
   color: #ba3939;
