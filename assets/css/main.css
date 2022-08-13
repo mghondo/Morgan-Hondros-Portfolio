@@ -139,6 +139,10 @@ body {
 #main {
   display: none;
 }
+
+#services {
+  display: none;
+}
 .hidden {
   display: none; 
 }
