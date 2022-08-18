@@ -99,6 +99,10 @@ body {
   padding-top: 40px;
 }
 
+#sidebarSearch {
+  display: hidden;
+}
+
 /*  Error Messages */
 .errorH4 {
   color: #ba3939;
