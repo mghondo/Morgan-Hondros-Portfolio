@@ -103,6 +103,10 @@ body {
   display: hidden;
 }
 
+blockquote .codeSnip {
+  text-align: left;
+}
+
 /*  Error Messages */
 .errorH4 {
   color: #ba3939;
