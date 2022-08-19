@@ -37,6 +37,8 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="ztXzFuTp"></script>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
@@ -45,7 +47,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>UpConstruction<span>.</span></h1>
+        <h1>Morgan Hondros<span>...</span></h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -130,10 +132,30 @@
                   Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
                 </p>
 
-                <blockquote>
-                  <p>
-                    Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
-                  </p>
+                <blockquote class="codeSnip" style="text-align: left; padding: 10px; color: #716646;">
+                  <pre class="line-numbers">
+                    <code class="language-html">
+      constructor(date, title, photo, author, topic, summary) {
+        // this.date = new Date();
+        this.date = date;
+        this.title = title;
+        this.photo = photo;
+        this.author = author;
+        this.topic = topic;
+        this.summary = summary;
+      }
+
+
+&lt;ul&gt;
+    &lt;li class="d-flex align-items-center"&gt;&lt;i class="bi bi-person"&gt;&lt;/i&gt; &lt;a href="blog-details.html"&gt;John Doe&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="d-flex align-items-center"&gt;&lt;i class="bi bi-clock"&gt;&lt;/i&gt; &lt;a href="blog-details.html"&gt;&lt;time datetime="2020-01-01"&gt;Jan 1, 2022&lt;/time&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="d-flex align-items-center"&gt;&lt;i class="bi bi-chat-dots"&gt;&lt;/i&gt; &lt;a href="blog-details.html"&gt;12 Comments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+p { color: red }
+                    </code>
+                 </pre>
                 </blockquote>
 
                 <p>
@@ -191,6 +213,14 @@
                 </p>
               </div>
             </div><!-- End post author -->
+
+            <!-- Facebook -->
+            <div class="post-author d-flex align-items-center">
+            <!-- Step 2: Place this code wherever you want the plugin to appear on your page. -->
+                <div class="fb-comments" data-href="https://morganhondros.com/" data-width="" data-numposts="5"></div>
+
+            </div><!-- End post author -->
+
             <main id="main">
             <div class="comments">
 
@@ -327,6 +357,9 @@
 
       </div>
     </section><!-- End Blog Details Section -->
+
+
+
 
   </main>
   

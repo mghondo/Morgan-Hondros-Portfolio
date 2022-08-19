@@ -275,7 +275,8 @@ function init() {
       let now = new Date().getTime(),
         distance = countDown - now;
 
-      h3DateInnerText.innerText = date + dateString;
+      console.log(date);
+      h3DateInnerText.innerText = "Sept 10 2022 5pm" + dateString;
 
       if (document.querySelector("[data-days]") != null) {
         document.querySelector("[data-days]").innerText = Math.floor(
@@ -300,16 +301,5 @@ function init() {
           (distance % minute) / second
         );
       }
-
-      // if (distance < 0) {
-      //   clearInterval(x);
-      // }
     }, second);
 }
-
-// $(document).ready(function () {
-//   if (window.location.pathname == "../index.html") {
-//     init();
-//   }
-// });
-// init();
