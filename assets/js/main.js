@@ -276,7 +276,7 @@ function init() {
         distance = countDown - now;
 
       console.log(date);
-      h3DateInnerText.innerText = "Sept 10 2022 5pm" + dateString;
+      h3DateInnerText.innerText = "Sept 10 2022 10pm" + dateString;
 
       if (document.querySelector("[data-days]") != null) {
         document.querySelector("[data-days]").innerText = Math.floor(
