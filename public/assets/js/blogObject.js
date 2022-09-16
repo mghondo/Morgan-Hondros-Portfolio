@@ -14,10 +14,10 @@ const part5 =
 // Subject
 const part6 = "</span></div></div><p>";
 // Summary
-const part7 = "</p><hr><a href=";
+const part7 = '</p><hr><a href="';
 // Link
 const part8 =
-  'lass="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a></div></div></div>';
+  '" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a></div></div></div>';
 
 class BlogPostSum {
   constructor(date, title, photo, author, topic, summary, link) {
@@ -108,35 +108,16 @@ class BlogPostSum {
   }
 }
 let blogpost1 = new BlogPostSum(
-  "November 3rd, 1980",
-  "My First Post",
+  "September 10th, 2022",
+  "How My Programming Journey Started.",
   "assets/img/blog/blog-1.jpg",
-  "Fucking me",
-  "Maybe multiple topics",
-  "asdfsdafa"
+  "Morgan Hondros",
+  "Personal Article",
+  "This first article is a simple summary of how I got into programming. I could likely write an entire book, which may be interesting to my...",
+  "post.0001.html"
 );
 
-let blogpost2 = new BlogPostSum(
-  "March 3rd, 1981",
-  "Cody's Bday",
-  "assets/img/blog/blog-1.jpg",
-  "cody",
-  "asdfasdfas",
-  "sdfasdfafsdasf",
-  "sdfasd"
-);
-
-let blogpost3 = new BlogPostSum(
-  "August 3rd, 1989",
-  "Hobie doing something",
-  "assets/img/blog/blog-1.jpg",
-  "asdfsda",
-  "asdfasdfas",
-  "asdfasafsdfasf",
-  "link.html"
-);
-
-let blogArray = [blogpost1, blogpost2, blogpost3];
+let blogArray = [blogpost1];
 
 // for (let i = 0; i < blogArray.length; i++) {
 //   console.log(blogArray[i].date);
