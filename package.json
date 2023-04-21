@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.0",
-    "firebase": "^9.9.2"
+    "firebase": "^9.9.2",
+    "fullcalendar": "^5.11.3"
   },
   "name": "morgan-hondros-porfolio-countdown",
   "description": "Thanks for downloading this template!",
